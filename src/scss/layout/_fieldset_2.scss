@@ -1,23 +1,50 @@
 .fieldset__2 {
-  border: 0;
+  display: flex;
+  flex-direction: column;
+
   &--legend {
     display: flex;
     flex-direction: row;
+    text-align: left;
+    align-items: center;
+    margin: 20px 0 25px;
   }
   &--iconKeyboard {
-    background-color: red;
+    color: orange;
     width: 21px;
     height: 18px;
   }
-  //   &--iconArrow {
-  //   }
+  &--iconArrow {
+    width: 16px;
+    height: 18px;
+  }
   &--title {
     text-transform: uppercase;
+    margin: 0 155px 0 10px;
+    width: 24px;
   }
   &--input {
     border-color: green;
+    height: 30px;
+    margin: 7px 0 20px;
   }
+
   &--inputButton {
     background-color: orange;
+    color: white;
+    width: 140px;
+    height: 30px;
+    height: 30px;
+    margin: 7px 0 20px;
   }
+}
+.future_js {
+  width: 30px;
+  height: 30px;
+  border: solid;
+  border-color: green;
+}
+.form {
+  height: 100vh;
+  margin: 0 20px 0 20px;
 }
