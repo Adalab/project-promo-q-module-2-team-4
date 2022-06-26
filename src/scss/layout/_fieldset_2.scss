@@ -1,10 +1,23 @@
 .fieldset__2 {
-  &--icon {
+  border: 0;
+  &--legend {
+    display: flex;
+    flex-direction: row;
+  }
+  &--iconKeyboard {
     background-color: red;
     width: 21px;
     height: 18px;
   }
+  //   &--iconArrow {
+  //   }
   &--title {
     text-transform: uppercase;
+  }
+  &--input {
+    border-color: green;
+  }
+  &--inputButton {
+    background-color: orange;
   }
 }
