@@ -1,0 +1,136 @@
+  .display__fieldset-3{
+      display:none
+  }
+  
+  .fieldset-3{
+      width: 100%;
+      height: 175px;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+  }
+  
+  
+  .fieldset-3__legend{
+      padding-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;   
+      font-size: 18px;
+      color: #54585a;
+      font-family: 'Open Sans', sans-serif;  
+  }
+  
+  .fa-share-nodes{
+      color: #e17334;  
+  }
+  
+  .fieldset-3__legend--title{
+      text-transform: uppercase;
+      font-size: 18px; 
+      margin-left: 12px;
+      margin-right: 137px;
+  }
+  
+  .fieldset-3__button{ 
+      background-color:#e17334;
+      height: 50px;
+      width: 199px;
+      border-radius: 12px;
+      border: none;
+      margin-top: 30px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 18px;
+      font-family:'Open Sans', sans-serif;    
+  }
+  
+  .fa-address-card{
+      margin-right: 10px;
+  }
+  
+  .fieldset-3__div{
+      width: 280px;
+      height: 50px;
+      margin-top: 30px;
+      border-style: none;
+  }
+    
+  /*FIELDSET-4 STYLES*/
+  
+  .fieldset-4{
+      width: 100%;
+      height: 312px;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+  }
+  
+  .fieldset-4__legend{
+      padding-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;   
+      font-size: 18px;
+      color: #54585a;
+      font-family: 'Open Sans', sans-serif;  
+  }
+  
+  .fieldset-4__legend--title{
+      text-transform: uppercase;
+      font-size: 18px; 
+      margin-left: 12px;
+      margin-right: 137px;
+  }
+  
+  .fieldset-4__button{ 
+      background-color:#d5d5d5;
+      height: 50px;
+      width: 199px;
+      border-radius: 12px;
+      border: none;
+      margin-top: 30px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 18px;
+      font-family:'Open Sans', sans-serif;    
+  }
+  .fieldset-4__div{
+      width: 280px;
+      height: 50px;
+      margin-top: 30px;
+      border-style: none;
+  }
+  .fieldset-4__article{
+      display: flex;
+      flex-direction: column;    
+      align-items: center;
+  }
+  .fieldset-4___article--title{
+      font-size: 18px;
+      font-family:'Open Sans', sans-serif;
+      color: #54585a;
+  }
+  .fieldset-4__article--paragraph{
+      font-size: 12px;
+      font-family:'Open Sans', sans-serif;
+      color: #e17334;
+      margin-top: 5px;
+      margin-bottom: 10px;
+  }
+  .fieldset-4__article--button{
+      background-color:#00a0f5;
+      height: 30px;
+      width: 181px;
+      border-radius: 3px;
+      border: none;
+      color: white;
+      font-size: 14px;
+      font-family:'Open Sans';
+  }
+  
+  .fa-twitter{
+  margin-right: 9.5px;
+  }
