@@ -1,0 +1,125 @@
+.fieldset__2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+    &--title{
+        font-size: 18px;
+        font-weight: 600;
+        color: #54585a;
+    }
+    &--legend {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      align-items: center;
+      margin: 20px 0 25px;
+      width: 100%;
+    }
+    &--iconKeyboard {
+      color: orange;
+      width: 21px;
+      height: 18px;
+    }
+    &--iconArrow {
+      width: 16px;
+      height: 18px;
+    }
+}
+
+.range{
+    display: flex;
+    justify-content: space-between;
+    &__title{
+        margin-left: 39px;
+        color: #54585a;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+.pantone1{
+    width: 117px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    &__button{
+        width: 17px;
+        height: 17px;
+        color:grey;
+        border-color: #438792;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    &__first{
+        width: 30px;
+        height: 25px;
+        background-color: #114e4e;
+    }
+    &__second{
+        width: 30px;
+        height: 25px;
+        background-color: #438792;
+    }
+
+    &__third{
+        width: 30px;
+        height: 25px;
+        background-color: #a2deaf;
+    }
+   
+
+}
+.pantone2{
+    width: 117px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    
+    &__first{
+        width: 30px;
+        height: 25px;
+        background-color: #420101;
+    }
+    &__second{
+        width: 30px;
+        height: 25px;
+        background-color: #bd1010;
+    }
+
+    &__third{
+        width: 30px;
+        height: 25px;
+        background-color: #e95626;
+    }
+
+}
+.pantone3{
+    width: 117px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    &__first{
+        width: 30px;
+        height: 25px;
+        background-color: #3e5b65;
+    }
+    &__second{
+        width: 30px;
+        height: 25px;
+        background-color: #eab052;
+    }
+
+    &__third{
+        width: 30px;
+        height: 25px;
+        background-color: #a0c0cf;
+    }
+
+}
+
+// input[type='radio']:checked:after{
+//     background-color: grey;
+// }
+
+
