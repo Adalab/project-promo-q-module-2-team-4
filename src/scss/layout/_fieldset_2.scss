@@ -30,26 +30,36 @@
     height: 30px;
     margin: 7px 0 20px;
   }
-  &--fieldset {
+  &--addImageLabel {
     display: flex;
     flex-direction: row;
     gap: 20px;
   }
-  &--button {
+  &--addImageButton {
+    text-decoration: none;
     background-color: orange;
+    text-align: center;
+    line-height: 1.75;
+    border-radius: 10px;
     color: white;
-    border: none;
     width: 140px;
     height: 30px;
     margin: 7px 0 20px;
   }
 }
-.future_js {
+.square {
   width: 30px;
   height: 30px;
   border: solid;
-  border-color: green;
-  margin: 7px 0 20px;
+  display: none;
+}
+.future_js {
+  // width: 30px;
+  // height: 30px;
+  // border: solid;
+  // border-color: green;
+  // margin: 7px 0 20px;
+  display: none;
 }
 .form {
   height: 100vh;
