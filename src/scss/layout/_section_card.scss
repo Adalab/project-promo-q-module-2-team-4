@@ -1,20 +1,18 @@
 .preview{
-    width: 100vw;
-    height: 457px;
-    background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    height: 70vh;
+    background-image: linear-gradient(to bottom, $main-silver, $secondary-silver);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     &__button{
         height: 30px;
         border-radius: 15px;
         border: solid 1px white;
-        // margin-left: 45px;
-        margin-top: 38px;
-        color: #54585a;
+        color: $text-darkgrey;
         font-size: 12px;
-        background-color: #bfcdd0;
+        background-color: $main-silver;
         text-transform: uppercase;
         padding: 8px 12px 10px 10px;
         font-family: OpenSans;
@@ -34,7 +32,6 @@
     height: 329px;
     background-color: white;
     margin-top: 20px;
-    // margin-left: 45px;
     border-radius: 2px;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
     position: relative;
@@ -42,13 +39,13 @@
     &__rectangle{
         width: 5px;
         height: 42px;
-        background-color: #438792;
+        background-color: $medium-green;
         position: absolute;
         top: 23px;
     }
 
     &__name{
-        color: #114e4e;
+        color: $dark-green;
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         font-weight: bold;
@@ -59,7 +56,7 @@
     &__job{
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
-        color: #54585a;
+        color: $text-darkgrey;
         margin-left: 20px;
         margin-top: 4px;
         line-height: 1.5;
@@ -77,17 +74,17 @@
     flex-direction: row;
     gap: 10px;
     margin-left: 20px;
-    color: #114e4e;
+    color: $dark-green;
 
     &__icon{
         margin-top: 10px;
         border-radius: 16px;
-        border: solid 2px #a2deaf;
+        border: solid 2px $light-green;
         text-align: center;
         padding: 5px;
     }
 }
 
 .socialmedia a{
-    color: #114e4e;
+    color: $dark-green;
 }
