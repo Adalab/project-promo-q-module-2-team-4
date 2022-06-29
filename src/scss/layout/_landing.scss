@@ -1,7 +1,19 @@
 .landing {
   line-height: 2;
+
   &__article {
     text-align: center;
+    &--title {
+      color: $main-orange;
+      font-family: "Merriweather", serif;
+      font-size: 19.2px;
+    }
+    &--parragraph {
+      font-family: "Open Sans", sans-serif;
+      color: $dark-green;
+      font-size: 12.8px;
+      line-height: 1.5;
+    }
   }
   &__logo {
     width: 250px;
@@ -17,5 +29,35 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+    &--description {
+      color: $text-darkgrey;
+      font-family: "Open Sans", sans-serif;
+    }
   }
+  &__button {
+    width: 119px;
+    height: 42px;
+    background-color: $medium-green;
+    border-radius: 21px;
+    padding: 10px 20px;
+    text-align: center;
+    line-height: 2;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600px;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.wrapper {
+  text-align: center;
+  margin: 18px 0 38px 0;
+  padding: 15px 0 18px 0;
+}
+
+.landing__icon {
+  height: 32px;
+  color: $main-orange;
 }
