@@ -1,5 +1,6 @@
 // Quién trabaje aquí que no escriba nada y se estiliza cuando nos reunamos :3
 // Poned solo colores sin nombrar ninguna variable
+
 .form {
   // width: 100%;
   padding: 0 20px 0 20px;
@@ -7,4 +8,12 @@
   @media all and (min-width: 768px) {
     width: 50%;
   }
+}
+
+.collapsed{
+  display: none;
+}
+
+.hidden{
+  display:none;
 }
