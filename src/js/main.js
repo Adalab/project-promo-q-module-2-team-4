@@ -25,16 +25,15 @@ shareTitle.addEventListener("click", (event) =>
 // crear objeto para futuro JSON al pulsar el botón
 const buttonShare = document.querySelector(".js_content_share");
 
-function getData(objectData) {
+function getData() {
   const newCard = {
     name: document.querySelector(".js-name").value,
-    work: document.querySelector(".js-work").value,
+    job: document.querySelector(".js-job").value,
   };
-  // return newCard;
+  return newCard;
 }
 
-function handleClickButton(event) {
-  event.preventDefault();
-  console.log(getData);
-}
+const handleClickButton = (event) => event.preventDefault();
+console.log(getData());
+
 buttonShare.addEventListener("click", handleClickButton);
