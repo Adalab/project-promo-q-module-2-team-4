@@ -1,6 +1,8 @@
-.fieldset__2 {
+.fieldset__2--div {
   display: flex;
   flex-direction: column;
+}
+.fieldset__2 {
   width: 100%;
   &--legend {
     display: flex;

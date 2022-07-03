@@ -117,7 +117,12 @@
     }
 
 }
-
+.collapsed{
+    display: none;
+}
+.rotate{
+    transform: rotate(180deg);
+}
 // input[type='radio']:checked:after{
 //     background-color: grey;
 // }
