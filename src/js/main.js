@@ -21,3 +21,20 @@ fillTitle.addEventListener("click", (event) =>
 shareTitle.addEventListener("click", (event) =>
   shareContent.classList.toggle("collapsed")
 );
+
+// crear objeto para futuro JSON al pulsar el botón
+const buttonShare = document.querySelector(".js_content_share");
+
+function getData(objectData) {
+  const newCard = {
+    name: document.querySelector(".js-name").value,
+    work: document.querySelector(".js-work").value,
+  };
+  // return newCard;
+}
+
+function handleClickButton(event) {
+  event.preventDefault();
+  console.log(getData);
+}
+buttonShare.addEventListener("click", handleClickButton);
