@@ -7,7 +7,7 @@
         font-size: 18px;
         font-weight: 600;
         text-transform: uppercase;
-        color: #54585a;
+        color: $text-darkgrey;
         width: 100%;
     }
     &--legend {
@@ -19,7 +19,7 @@
       width: 100%;
     }
     &--iconSquare {
-      color: orange;
+      color: $main-orange;
       width: 21px;
       height: 18px;
     }
@@ -35,7 +35,7 @@
     width: 100%;
     &__title{
         margin-left: 19px;
-        color: #54585a;
+        color: $text-darkgrey;
         font-size: 14px;
         text-transform: uppercase;
     }
@@ -54,18 +54,18 @@
     &__first{
         width: 30px;
         height: 25px;
-        background-color: #114e4e;
+        background-color: $dark-green;
     }
     &__second{
         width: 30px;
         height: 25px;
-        background-color: #438792;
+        background-color: $medium-green;
     }
 
     &__third{
         width: 30px;
         height: 25px;
-        background-color: #a2deaf;
+        background-color: $light-green;
     }
    
 
@@ -79,12 +79,12 @@
     &__first{
         width: 30px;
         height: 25px;
-        background-color: #420101;
+        background-color: $dark-brown;
     }
     &__second{
         width: 30px;
         height: 25px;
-        background-color: #bd1010;
+        background-color: $dark-red;
     }
 
     &__third{
@@ -102,18 +102,18 @@
     &__first{
         width: 30px;
         height: 25px;
-        background-color: #3e5b65;
+        background-color: $grey-grey;
     }
     &__second{
         width: 30px;
         height: 25px;
-        background-color: #eab052;
+        background-color: $medium-orange;
     }
 
     &__third{
         width: 30px;
         height: 25px;
-        background-color: #a0c0cf;
+        background-color: $light-grey;
     }
 
 }
