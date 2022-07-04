@@ -61,9 +61,11 @@ jobInput.addEventListener("keyup", handleKeyUp);
 
 //
 const buttonShare = document.querySelector(".js_content_share");
-const fieldset4 = document.querySelector('.js_fieldset-4');
+const twitter = document.querySelector('.js_twitter');
 
 buttonShare.addEventListener("click", (event) => {
   event.preventDefault();
-  fieldset4.classList.toggle("collapsed");
+  twitter.classList.toggle("collapsed");
 });
+
+//
