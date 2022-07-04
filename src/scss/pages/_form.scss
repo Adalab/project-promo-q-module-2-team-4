@@ -6,13 +6,12 @@
   font-family: "Open Sans", sans-serif;
   @media all and (min-width: 768px) {
     width: 50%;
+    margin-left: 40px;
   }
 }
-
-.collapsed{
-  display: none;
-}
-
 .arrow-down{
   transform: rotate(180deg);
+}
+.collapsed{
+  display: none;
 }
