@@ -15,16 +15,28 @@ const arrowIcon3 = document.querySelector('.js_arrow_share');
 designTitle.addEventListener("click", (event) =>{
   designContent.classList.toggle("collapsed");
   arrowIcon1.classList.toggle('arrow-down');
+  if (!designContent.classList.contains("collapsed")) {
+    fillContent.classList.add("collapsed");
+    shareContent.classList.add("collapsed");
+  }
 });
 
 fillTitle.addEventListener("click", (event) =>{
   fillContent.classList.toggle("collapsed");
   arrowIcon2.classList.toggle('arrow-down');
+  if (!fillContent.classList.contains("collapsed")) {
+    designContent.classList.add("collapsed");
+    shareContent.classList.add("collapsed");
+  }
 });
 
 shareTitle.addEventListener("click", (event) =>{
   shareContent.classList.toggle("collapsed");
   arrowIcon3.classList.toggle('arrow-down');
+  if (!shareContent.classList.contains("collapsed")) {
+    designContent.classList.add("collapsed");
+    fillContent.classList.add("collapsed");
+  }
 });
 
 
