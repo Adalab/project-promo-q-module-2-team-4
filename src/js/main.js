@@ -17,10 +17,11 @@ const shareContent = document.querySelector('.js_content_share');
 const arrowIcon = document.querySelector('.js_arrow');
 
 /*FIELDSET 4*/
-const ffContent = document.querySelector('js_content_share_fieldset-4');
+const div = document.querySelector('.js_f4_div');
 
 /*-----------COLAPSABLES----------*/
-/*esta función se va a ejecutar cada vez que haga click en desingHeader*/
+
+
 const handleClick=(ev)=>{
   const elementClick = ev.currentTarget;
   console.log(elementClick);
@@ -34,8 +35,10 @@ const handleClick=(ev)=>{
   else if(elementClick.classList.contains('js_title_share')){
     shareContent.classList.toggle('collapsed');
   }
-}; 
+};
 
 designTitle.addEventListener('click', handleClick);
 fillTitle.addEventListener('click', handleClick);
 shareTitle.addEventListener('click', handleClick);
+
+
