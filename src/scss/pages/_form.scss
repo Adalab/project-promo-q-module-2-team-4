@@ -8,3 +8,11 @@
     width: 50%;
   }
 }
+
+.collapsed{
+  display: none;
+}
+
+.arrow-down{
+  transform: rotate(180deg);
+}
