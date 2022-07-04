@@ -17,4 +17,6 @@ designTitle.addEventListener('click',(ev) => {
     designContent.classList.add('collapsed');
   }
   ev.preventDefault();
+  arrowIcon.classList.toggle('rotate');
 });
+
