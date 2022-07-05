@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyect 2</title>
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6d7b554f88.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+        <figure class="header__figure">
+            <img src="/assets/images/tarjetas-molonas.png" alt="logo-awesome-profile-cards" class="header__figure--logo">
+        </figure>
+
+    </header>
+
+    <main class="main">
+      <section class="preview">
+        <div class="wrapper">
+          <button class="preview__button">
+            <i class="fa-regular fa-trash-can"></i>Reset
+          </button>
+
+          <article class="card">
+            <div class="card__rectangle"></div>
+            <div class="card__info">
+              <h3 class="card__name js_cardname">Nombre Apellido</h3>
+              <p class="card__job js_cardjob">Front-end developer</p>
+            </div>
+            <div class="card__photo">
+              <img
+                src="./assets/images/photo-temp.jpg"
+                alt="Foto de prueba"
+                width="100%"
+              />
+            </div>
+            <nav class="card__footer">
+              <ul class="socialmedia">
+                <li>
+                  <a href="#" title="Teléfono" target="_blank"
+                    ><i class="socialmedia__icon fa-solid fa-mobile-screen-button"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" title="Correo" target="_blank"
+                    ><i class="socialmedia__icon fa-regular fa-envelope"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" title="LinkedIn" target="_blank"
+                    ><i class="socialmedia__icon fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" title="GitHub" target="_blank"
+                    ><i class="socialmedia__icon fa-brands fa-github-alt"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+          </article>
+        </div>
+      </section>
+
+      <form class="form" action="">
+        <fieldset class="fieldset__1">
+          <legend class="js_title_design fieldset__1--legend">
+            <i class="fa-solid fa-vector-square fieldset__1--iconSquare"></i>
+            <h2 class="fieldset__1--title">Diseña</h2>
+            <i class="js_arrow_design fa-solid fa-angle-up fieldset__1--iconArrow"></i>
+          </legend>
+          <section class="js_content_design range collapsed">
+            <h3 class="range__title">Colores</h3>
+            <div class="range__pantone">
+              <div class="pantone1">
+                <input class="pantone1__input" type="radio" id="check1" name="select" />
+                <div class="pantone1__first"></div>
+                <div class="pantone1__second"></div>
+                <div class="pantone1__third"></div>
+              </div>
+              <div class="pantone2">
+                <input class="pantone1__input" type="radio" id="check2" name="select" />
+                <div class="pantone2__first"></div>
+                <div class="pantone2__second"></div>
+                <div class="pantone2__third"></div>
+              </div>
+              <div class="pantone3">
+                <input class="pantone1__input" type="radio" id="check3" name="select" />
+                <div class="pantone3__first"></div>
+                <div class="pantone3__second"></div>
+                <div class="pantone3__third"></div>
+              </div>
+            </div>
+          </section>
+        </fieldset>
+
+          
+            <fieldset class="fieldset__2">
+              <legend class="js_title_fill fieldset__2--legend">
+                <i class="fa-solid fa-keyboard fieldset__2--iconKeyboard"></i>
+                <h2 class="fieldset__2--title">Rellena</h2>
+                <i class="js_arrow_fill fa-solid fa-angle-up fieldset__2--iconArrow"></i>
+              </legend>
+              <div class="js_content_fill fieldset__2--div collapsed">
+                <label for="firstAndSecondName">Nombre completo</label>
+                <input
+                  placeholder="Ej: Sally Jill"
+                  type="text"
+                  name="firstAndSecondName"
+                  id="firstAndSecondName"
+                  class="fieldset__2--input js_name"
+                />
+                <label for="work">Puesto</label>
+                <input
+                  placeholder="Ej: Front-end unicorns"
+                  type="text"
+                  name="work"
+                  id="work"
+                  class="fieldset__2--input js_job"
+                />
+                <!-- <fieldset class="fieldset__2--fieldset">
+                  <legend>Imagen de perfil</legend>
+                  <button class="fieldset__2--button">Añadir imagen</button>
+                  <label for="AddImage"></label>
+                  <input
+                    type="button"
+                    id="AddImage"
+                    class="future_js"
+                  /></fieldset> -->
+                <label class= "fieldset__2--addImageLabel" for="image">Imagen de perfil</label>
+                <a href="#" class="fieldset__2--addImageButton">Añadir imagen</a>
+                <input
+                    type="field"
+                    id="AddImage"
+                    class="future_js"
+                  />
+                  <div class="square"></div>
+                <label for="email">Email</label>
+                <input
+                  placeholder="Ej: sallyhill@gmail.com"
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="fieldset__2--input js_email"
+                />
+                <label for="tel">Teléfono</label>
+                <input
+                  placeholder="Ej. 555-55-55-55"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  class="fieldset__2--input js_tlf"
+                />
+                <label for="linkedin">LinkedIn</label>
+                <input
+                  placeholder="Ej: linkedin.com/sally.hill"
+                  type="url"
+                  name="linkedin"
+                  id="linkedin"
+                  class="fieldset__2--input js_linkedin"
+                />
+                <label for="github">Github</label>
+                <input
+                  placeholder="Ej: @sally-hill"
+                  type="text"
+                  name="github"
+                  id="github"
+                  class="fieldset__2--input js_github"
+                />
+              </div>
+            </fieldset>
+
+        </html>
+
+        <fieldset class="fieldset-3">
+          <legend class="js_title_share fieldset-3__legend">
+            <i class="fa-solid fa-share-nodes"></i>
+            <h2 class="fieldset-3__legend--title">comparte</h2>
+            <i class="js_arrow_share fa-solid fa-angle-up fieldset__2--iconArrow"></i>
+          </legend>
+
+          <button class="js_content_share fieldset-3__button collapsed">
+            <i class="fa-solid fa-address-card"></i>crear tarjeta
+          </button>
+        </fieldset>
+
+        <!-- EMPIEZA AQUÍ EL "FIELDSET-4"  -->
+
+        <article class="fieldset-4__article js_twitter collapsed">
+          <h2 class="fieldset-4___article--title">La tarjeta ha sido creada:</h2>
+          <p class="fieldset-4__article--paragraph">
+            https://awesome-profile-card.com?id=A456DF0001
+          </p>
+
+          <button class="fieldset-4__article--button">
+            <i class="fa-brands fa-twitter"></i>Compartir en Twitter
+          </button>
+        </article>
+
+      </form>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">Awesome profile cards &copy;2018</p>
+        <figure class="footer__logo">
+            <img class="footer__image" src="./assets/images/logo-adalab.png" alt="Logo de Adalab" title="Adalab" width="100%">
+        </figure>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
