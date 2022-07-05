@@ -2,7 +2,7 @@
 // Poned solo colores sin nombrar ninguna variable
 .main {
   width: 100%;
-
+  background-image: linear-gradient(to bottom, $main-background, $white 9%);
   &__landing {
     display: flex;
     flex-direction: column;

@@ -1,9 +1,12 @@
-.fieldset__2--div {
-  display: flex;
-  flex-direction: column;
-}
 .fieldset__2 {
   width: 100%;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #d8d8d8;
+  label {
+    color: $dark-green;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+  }
   &--legend {
     display: flex;
     flex-direction: row;
@@ -13,7 +16,7 @@
     width: 100%;
   }
   &--iconKeyboard {
-    color: orange;
+    color: $main-orange;
     width: 21px;
     height: 18px;
   }
@@ -25,10 +28,13 @@
     text-transform: uppercase;
     margin-left: 10px;
     width: 100%;
+    font-weight: 600px;
+    font-size: 18px;
+    color: $text-darkgrey;
+    font-family: "Open Sans", sans-serif;
   }
   &--input {
-    border: solid;
-    border-color: green;
+    border: solid 1px $light-green;
     height: 30px;
     margin: 7px 0 20px;
   }
@@ -39,14 +45,18 @@
   }
   &--addImageButton {
     text-decoration: none;
-    background-color: orange;
+    background-color: $main-orange;
     text-align: center;
     line-height: 1.75;
     border-radius: 10px;
-    color: white;
+    color: $white;
     width: 140px;
     height: 30px;
     margin: 7px 0 20px;
+  }
+  &--div {
+    display: flex;
+    flex-direction: column;
   }
 }
 .square {
@@ -63,6 +73,5 @@
   // margin: 7px 0 20px;
   display: none;
 }
-
 
 // Añadir variables y font family //
