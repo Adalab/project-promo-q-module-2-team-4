@@ -22,6 +22,8 @@
           id="work"
           class="fieldset__2--input js_job"
         />
+
+        
         <!-- <fieldset class="fieldset__2--fieldset">
           <legend>Imagen de perfil</legend>
           <button class="fieldset__2--button">Añadir imagen</button>
@@ -31,14 +33,22 @@
             id="AddImage"
             class="future_js"
           /></fieldset> -->
-        <label class= "fieldset__2--addImageLabel" for="image">Imagen de perfil</label>
-        <a href="#" class="fieldset__2--addImageButton">Añadir imagen</a>
+
+          <div class="action">
+            <label class= "fieldset__2--addImageLabel" for="image">Imagen de perfil</label>
+            <label class="action__upload-btn fieldset__2--addImageButton" for="img-selector">Añadir imagen</label>
+            <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn fieldset__2--addImageButton">
+          </div>
+          
+        <!-- <label class= "fieldset__2--addImageLabel" for="image">Imagen de perfil</label> -->
+        <!-- <a href="#" class="fieldset__2--addImageButton">Añadir imagen</a>
         <input
             type="field"
             id="AddImage"
             class="future_js"
-          />
-          <div class="square"></div>
+          /> -->
+          <div class="profile__preview js__profile-preview square"></div>
+
         <label for="email">Email</label>
         <input
           placeholder="Ej: sallyhill@gmail.com"

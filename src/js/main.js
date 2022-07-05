@@ -78,6 +78,7 @@ const twitter = document.querySelector('.js_twitter');
 buttonShare.addEventListener("click", (event) => {
   event.preventDefault();
   twitter.classList.toggle("collapsed");
+  buttonShare.classList.add("greyed");
 });
 
 //

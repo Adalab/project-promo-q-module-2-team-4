@@ -60,8 +60,11 @@
 .square {
   width: 30px;
   height: 30px;
-  border: solid;
-  display: none;
+  border: solid 1px $light-green;
+  position: absolute;
+  left: 260px;
+  top: 398px;
+  // display: none;
 }
 .future_js {
   // width: 30px;
@@ -72,4 +75,9 @@
   display: none;
 }
 
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+  darle los estilos que queremos */
+  display: none;
+}
 // Añadir variables y font family //
