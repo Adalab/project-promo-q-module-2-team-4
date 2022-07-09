@@ -38,10 +38,6 @@
     height: 30px;
     margin: 7px 0 20px;
   }
-  &--addImageLabel {
-  }
-  &--addImageButton {
-  }
   &--div {
     display: flex;
     flex-direction: column;
@@ -95,7 +91,7 @@
 .profile__image,
 .profile__preview {
   background-position: center;
-  backrgound-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   border: 1px solid #ccc;
 }
