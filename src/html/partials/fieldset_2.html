@@ -5,8 +5,8 @@
         <h2 class="fieldset__2--title">Rellena</h2>
         <i class="js_arrow_fill fa-solid fa-angle-up fieldset__2--iconArrow"></i>
       </legend>
-      <div class="js_content_fill fieldset__2--div">
-        <label for="firstAndSecondName">Nombre completo</label>
+      <div class="js_content_fill fieldset__2--div collapsed">
+        <label class="label" for="firstAndSecondName">Nombre completo</label>
         <input
           placeholder="Ej: Sally Jill"
           type="text"
@@ -14,7 +14,7 @@
           id="firstAndSecondName"
           class="fieldset__2--input js_name"
         />
-        <label for="work">Puesto</label>
+        <label class="label" for="work">Puesto</label>
         <input
           placeholder="Ej: Front-end unicorns"
           type="text"
@@ -22,24 +22,17 @@
           id="work"
           class="fieldset__2--input js_job"
         />
-        <!-- <fieldset class="fieldset__2--fieldset">
-          <legend>Imagen de perfil</legend>
-          <button class="fieldset__2--button">Añadir imagen</button>
-          <label for="AddImage"></label>
-          <input
-            type="button"
-            id="AddImage"
-            class="future_js"
-          /></fieldset> -->
-        <label class= "fieldset__2--addImageLabel" for="image">Imagen de perfil</label>
-        <a href="#" class="fieldset__2--addImageButton">Añadir imagen</a>
-        <input
-            type="field"
-            id="AddImage"
-            class="future_js"
-          />
-          <div class="square"></div>
-        <label for="email">Email</label>
+        
+              <div class="wrapperImageFieldset2">
+                 <div class="action">
+                   <label class="action__upload-btn" for="img-selector">Añadir imagen</label>
+                  <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn">
+                </div>
+      
+              <div class="profile__preview js__profile-preview" style="background-image:url(https://i.pinimg.com/236x/c4/db/d0/c4dbd0edfc001aabb1fcad74045be62c--teacup-pomeranian-puppy-animal-instinct.jpg)"></div>
+              </div>
+      
+        <label class="label" for="email">Email</label>
         <input
           placeholder="Ej: sallyhill@gmail.com"
           type="email"
@@ -47,7 +40,7 @@
           id="email"
           class="fieldset__2--input js_email"
         />
-        <label for="tel">Teléfono</label>
+        <label class="label" for="tel">Teléfono</label>
         <input
           placeholder="Ej. 555-55-55-55"
           type="tel"
@@ -55,7 +48,7 @@
           id="tel"
           class="fieldset__2--input js_tlf"
         />
-        <label for="linkedin">LinkedIn</label>
+        <label class="label" for="linkedin">LinkedIn</label>
         <input
           placeholder="Ej: linkedin.com/sally.hill"
           type="url"
@@ -63,7 +56,7 @@
           id="linkedin"
           class="fieldset__2--input js_linkedin"
         />
-        <label for="github">Github</label>
+        <label class="label" for="github">Github</label>
         <input
           placeholder="Ej: @sally-hill"
           type="text"
@@ -72,6 +65,7 @@
           class="fieldset__2--input js_github"
         />
       </div>
+    </div>
     </fieldset>
 
 </html>
