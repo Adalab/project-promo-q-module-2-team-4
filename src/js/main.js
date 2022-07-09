@@ -92,4 +92,31 @@ buttonShare.addEventListener('click', (event) => {
   buttonShare.classList.add('grey');
 });
 
-//
+// Añadir paleta
+
+const cardPreview = document.querySelector('.js-card');
+const clickPalette1 = document.querySelector('.js-palette1');
+const clickPalette2 = document.querySelector('.js-palette2');
+const clickPalette3 = document.querySelector('.js-palette3');
+
+const addNewPaletteClass = (selectedPaletteValue) => {
+  cardPreview.classList.add(selectedPaletteValue);
+};
+
+const resetPaletteClasses = () => {
+  cardPreview.classList.remove('card__rectangle');
+  cardPreview.classList.remove('palette1');
+  cardPreview.classList.remove('palette2');
+  cardPreview.classList.remove('palette3');
+};
+
+const handleClickPalette = (event) => {
+  const selectedPalette = event.currentTarget;
+  const selectedPaletteValue = selectedPalette.value;
+  resetPaletteClasses();
+  addNewPaletteClass(selectedPaletteValue);
+};
+
+clickPalette1.addEventListener('click', handleClickPalette);
+clickPalette2.addEventListener('click', handleClickPalette);
+clickPalette3.addEventListener('click', handleClickPalette);

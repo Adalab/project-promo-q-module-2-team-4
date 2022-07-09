@@ -12,7 +12,7 @@
     font-weight: 600px;
     font-size: 18px;
     color: $text-darkgrey;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   &--legend {
     display: flex;
@@ -121,3 +121,31 @@
 // input[type='radio']:checked:after{
 //     background-color: grey;
 // }
+
+.palette1 {
+  background-color: #bd1010;
+  width: 240px;
+  height: 329px;
+  margin-top: 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+.palette2 {
+  background-color: blue;
+  width: 240px;
+  height: 329px;
+  margin-top: 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+.palette3 {
+  background-color: violet;
+  width: 240px;
+  height: 329px;
+  margin-top: 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  position: relative;
+}
