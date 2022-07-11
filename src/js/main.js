@@ -102,11 +102,11 @@ const renderForm = () => {
   } else {
     cardgithub.href = 'https://github.com/';
   }
-  // if (mailValue !== '') {
-  //   cardgithub.href = ;
-  // } else {
-  //   cardmail.href = '';
-  // }
+  if (mailValue !== '') {
+    cardmail.href = `mailto:${mailValue}`;
+  } else {
+    cardmail.href = 'adalab@gmail.com';
+  }
 };
 
 function handleKeyUp(event) {
@@ -141,7 +141,7 @@ const resetPaletteClasses = () => {
 };
 
 const handleClickRadio = (event) => {
-  const palette = parseInt(event.currentTarget);
+  const palette = parseInt(event.currentTarget.value);
   data.palette = palette;
   resetPaletteClasses();
   addNewPaletteClass(palette);
