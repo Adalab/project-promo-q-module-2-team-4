@@ -14,6 +14,20 @@ const arrowIcon1 = document.querySelector(".js_arrow_design");
 const arrowIcon2 = document.querySelector(".js_arrow_fill");
 const arrowIcon3 = document.querySelector(".js_arrow_share");
 
+const data = {
+  palette: "",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: "",
+};
+
+
+
+
 designTitle.addEventListener("click", (event) => {
   designContent.classList.toggle("collapsed");
   fillContent.classList.add("collapsed");
@@ -54,35 +68,62 @@ shareTitle.addEventListener("click", (event) => {
   }
 });
 
-const nameInput = document.querySelector(".js_name");
-const jobInput = document.querySelector(".js_job");
+const nameInput = document.querySelector('.js_name');
+const jobInput = document.querySelector('.js_job');
 
-// const emailInput = document.querySelector('.js_email');
-// const tlfInput = document.querySelector('.js_tlf');
-// const linkedinInput = document.querySelector('.js_linkedin');
-// const githubInput = document.querySelector('.js_github');
+const mailInput = document.querySelector('.js_email');
+const linkedinInput = document.querySelector('.js_linkedin');
+const githubInput = document.querySelector('.js_github');
 
-const cardname = document.querySelector(".js_cardname");
-const cardjob = document.querySelector(".js_cardjob");
+const cardname = document.querySelector('.js_cardname');
+const cardjob = document.querySelector('.js_cardjob');
+const cardmail = document.querySelector('.js_cardemail');
+const cardlinkedin = document.querySelector('.js_cardlinkedin');
+const cardgithub = document.querySelector('.js_cardgithub');
 
-function handleKeyUp(event) {
-  const nameInputValue = nameInput.value;
-  const jobInputValue = jobInput.value;
-
-  if (nameInputValue !== "") {
-    cardname.innerHTML = nameInputValue;
+const renderForm = () => {
+  const nameValue = nameInput.value;
+  const jobValue = jobInput.value;
+  const linkedinValue = linkedinInput.value;
+  const githubValue = githubInput.value;
+  const mailValue = mailInput.value;
+  if (nameValue !== '') {
+    cardname.innerHTML = nameValue;
   } else {
     cardname.innerHTML = `Nombre Apellido`;
   }
-  if (jobInputValue !== "") {
-    cardjob.innerHTML = jobInputValue;
+  if (jobValue !== '') {
+    cardjob.innerHTML = jobValue;
   } else {
     cardjob.innerHTML = `Front-end developer`;
   }
+  if (linkedinValue !== '') {
+    cardlinkedin.href = linkedinValue;
+  } else {
+    cardlinkedin.href = 'https://es.linkedin.com/';
+  }
+  if (githubValue !== '') {
+    cardgithub.href = githubValue;
+  } else {
+    cardgithub.href = 'https://github.com/';
+  }
+  if (mailValue !== '') {
+    cardmail.href = `mailto:${mailValue}`;
+  } else {
+    cardmail.href = 'adalab@gmail.com';
+  }
+};
+
+function handleKeyUp(event) {
+  renderForm();
 }
 
-nameInput.addEventListener("keyup", handleKeyUp);
-jobInput.addEventListener("keyup", handleKeyUp);
+nameInput.addEventListener('keyup', handleKeyUp);
+jobInput.addEventListener('keyup', handleKeyUp);
+linkedinInput.addEventListener('keyup', handleKeyUp);
+githubInput.addEventListener('keyup', handleKeyUp);
+
+
 
 //
 
@@ -93,14 +134,27 @@ buttonShare.addEventListener("click", (event) => {
 });
 
 //
-/* GUARDAR INPUTS */
-const emailInput = document.querySelector('.js_email');
-const tlfInput = document.querySelector('.js_tlf');
-const linkedinInput = document.querySelector('.js_linkedin');
-const githubInput = document.querySelector('.js_github');
 
 
+//Seleccionar paletas
 
+
+const allRadio = document.querySelectorAll('.js_radio');
+const cardPreview = document.querySelector('.js_cardPreview');
+
+function handlerRadio (ev) {
+  const palette = parseInt(ev.currentTarget.value);
+  data.palette = palette;
+  cardPreview.classList.remove('palette1','palette2','palette3');
+  cardPreview.classList.add(`palette${palette}`);
+
+}
+
+
+for(const oneRadio of allRadio){
+  oneRadio.addEventListener('click', handlerRadio);
+
+}
 
 /* BOTÓN RESET */
 
@@ -108,35 +162,15 @@ const resetButton = document.querySelector('.js-reset-button');
 
 function handleReset (ev) {
   ev.preventDefault();
-
+  cardPreview.classList.remove('palette1','palette2','palette3');
+  cardPreview.classList.add('palette1');
+  cardname.innerHTML = `Nombre Apellido`;
+  cardjob.innerHTML = `Front-end developer`;
+  cardlinkedin.href = 'https://es.linkedin.com/';
+  cardgithub.href = 'https://github.com/';
+  cardmail.href = '#';
 }
 
+
 resetButton.addEventListener('click', handleReset);
-
-/*PALETAS
-
-1- Escuchar evento sobre los radios
-2- Identificar el radio seleccionado
-3- Asignar las clases de css correspondientes
-*/
-
-const allRadio = document.querySelectorAll('.js_radio');
-const previewContainer = document.querySelector('js-card');
-
-/*allRadio.addEventListener -> esto no funciona porque no se puede escuchar un evento sobre un array, hay que hacer un bucle*/
-
-
-function handlerRadio(ev) {
-const palette = parseInt(ev.currentTarget.value);
-data.palette = palette; //data es el objeto que almacena todos los valores de la tarjeta
-previewContainer.classList.remove('palette-1');
-previewContainer.classList.remove('palette-2');
-previewContainer.classList.remove('palette-3');
-
-previewContainer.classList.add(`palette-${palette}`);
-};
-
-for (const oneRadio of allRadio) {oneRadio.addEventListener('click', handlerRadio);}
-
-
 
