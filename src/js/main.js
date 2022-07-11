@@ -1,4 +1,5 @@
 'use strict';
+
 const buttonShare = document.querySelector('.js_content_share');
 const twitter = document.querySelector('.js_twitter');
 
@@ -13,6 +14,14 @@ const shareContent = document.querySelector('.js_content_share');
 const arrowIcon1 = document.querySelector('.js_arrow_design');
 const arrowIcon2 = document.querySelector('.js_arrow_fill');
 const arrowIcon3 = document.querySelector('.js_arrow_share');
+
+//objeto
+const data = {
+  palette: 1,
+  name: '',
+  job: '',
+  email: '',
+};
 
 designTitle.addEventListener('click', (event) => {
   designContent.classList.toggle('collapsed');
@@ -57,32 +66,57 @@ shareTitle.addEventListener('click', (event) => {
 const nameInput = document.querySelector('.js_name');
 const jobInput = document.querySelector('.js_job');
 
-// const emailInput = document.querySelector('.js_email');
-// const tlfInput = document.querySelector('.js_tlf');
-// const linkedinInput = document.querySelector('.js_linkedin');
-// const githubInput = document.querySelector('.js_github');
+const mailInput = document.querySelector('.js_email');
+const linkedinInput = document.querySelector('.js_linkedin');
+const githubInput = document.querySelector('.js_github');
 
 const cardname = document.querySelector('.js_cardname');
 const cardjob = document.querySelector('.js_cardjob');
+const cardmail = document.querySelector('.js-mail');
+const cardlinkedIn = document.querySelector('.js-linkedIn');
+const cardgithub = document.querySelector('.js-github');
 
-function handleKeyUp(event) {
-  const nameInputValue = nameInput.value;
-  const jobInputValue = jobInput.value;
-
-  if (nameInputValue !== '') {
-    cardname.innerHTML = nameInputValue;
+const renderForm = () => {
+  const nameValue = nameInput.value;
+  const jobValue = jobInput.value;
+  const linkedinValue = linkedinInput.value;
+  const githubValue = githubInput.value;
+  const mailValue = mailInput.value;
+  if (nameValue !== '') {
+    cardname.innerHTML = nameValue;
   } else {
     cardname.innerHTML = `Nombre Apellido`;
   }
-  if (jobInputValue !== '') {
-    cardjob.innerHTML = jobInputValue;
+  if (jobValue !== '') {
+    cardjob.innerHTML = jobValue;
   } else {
     cardjob.innerHTML = `Front-end developer`;
   }
+  if (linkedinValue !== '') {
+    cardlinkedIn.href = linkedinValue;
+  } else {
+    cardlinkedIn.href = 'https://es.linkedin.com/';
+  }
+  if (githubValue !== '') {
+    cardgithub.href = githubValue;
+  } else {
+    cardgithub.href = 'https://github.com/';
+  }
+  // if (mailValue !== '') {
+  //   cardgithub.href = ;
+  // } else {
+  //   cardmail.href = '';
+  // }
+};
+
+function handleKeyUp(event) {
+  renderForm();
 }
 
 nameInput.addEventListener('keyup', handleKeyUp);
 jobInput.addEventListener('keyup', handleKeyUp);
+linkedinInput.addEventListener('keyup', handleKeyUp);
+githubInput.addEventListener('keyup', handleKeyUp);
 
 //
 
@@ -95,28 +129,27 @@ buttonShare.addEventListener('click', (event) => {
 // Añadir paleta
 
 const cardPreview = document.querySelector('.js-card');
-const clickPalette1 = document.querySelector('.js-palette1');
-const clickPalette2 = document.querySelector('.js-palette2');
-const clickPalette3 = document.querySelector('.js-palette3');
+const clickRadio = document.querySelectorAll('.js-palette'); //me trae un array
 
-const addNewPaletteClass = (selectedPaletteValue) => {
-  cardPreview.classList.add(selectedPaletteValue);
+const addNewPaletteClass = (palette) => {
+  cardPreview.classList.add(`palette-${palette}`);
 };
 
 const resetPaletteClasses = () => {
   cardPreview.classList.remove('card__rectangle');
-  cardPreview.classList.remove('palette1');
-  cardPreview.classList.remove('palette2');
-  cardPreview.classList.remove('palette3');
+  cardPreview.classList.remove('palette1', 'palette2', 'palette3');
 };
 
-const handleClickPalette = (event) => {
-  const selectedPalette = event.currentTarget;
-  const selectedPaletteValue = selectedPalette.value;
+const handleClickRadio = (event) => {
+  const palette = parseInt(event.currentTarget);
+  data.palette = palette;
   resetPaletteClasses();
-  addNewPaletteClass(selectedPaletteValue);
+  addNewPaletteClass(palette);
 };
+for (const oneRadio of clickRadio) {
+  oneRadio.addEventListener('click', handleClickRadio);
+} //puedo hacerlo con un ForEach
 
-clickPalette1.addEventListener('click', handleClickPalette);
-clickPalette2.addEventListener('click', handleClickPalette);
-clickPalette3.addEventListener('click', handleClickPalette);
+// clickRadio.addEventListener('click', handleClickRadio); //no puedo escuchar un evento sobre un array, por eso usaremos un bucle para recorrerlo, lo teemos en la linea 126
+
+// Mejor usar el value que nos da cuando hacemos el bucle, ya que necesitaré en el objeto un value 1,2 o 3 y no "palette1" tal como le escribí yo anterioemente. Para ello concatenamos el value con el "palette1"
