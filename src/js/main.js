@@ -14,6 +14,20 @@ const arrowIcon1 = document.querySelector(".js_arrow_design");
 const arrowIcon2 = document.querySelector(".js_arrow_fill");
 const arrowIcon3 = document.querySelector(".js_arrow_share");
 
+const data = {
+  palette: "",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: "",
+};
+
+
+
+
 designTitle.addEventListener("click", (event) => {
   designContent.classList.toggle("collapsed");
   fillContent.classList.add("collapsed");
@@ -92,4 +106,18 @@ buttonShare.addEventListener("click", (event) => {
   buttonShare.classList.add("grey");
 });
 
-//
+//Selecionar paletas
+
+
+
+const allRadio = document.querySelectorAll('.js_radio');
+
+function handlerRadio (ev) {
+
+}
+
+for(const oneRadio of allRadio){
+oneRadio.addEventListener('click', handlerRadio);
+
+}
+
