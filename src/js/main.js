@@ -68,35 +68,62 @@ shareTitle.addEventListener("click", (event) => {
   }
 });
 
-const nameInput = document.querySelector(".js_name");
-const jobInput = document.querySelector(".js_job");
+const nameInput = document.querySelector('.js_name');
+const jobInput = document.querySelector('.js_job');
 
-// const emailInput = document.querySelector('.js_email');
-// const tlfInput = document.querySelector('.js_tlf');
-// const linkedinInput = document.querySelector('.js_linkedin');
-// const githubInput = document.querySelector('.js_github');
+const mailInput = document.querySelector('.js_email');
+const linkedinInput = document.querySelector('.js_linkedin');
+const githubInput = document.querySelector('.js_github');
 
-const cardname = document.querySelector(".js_cardname");
-const cardjob = document.querySelector(".js_cardjob");
+const cardname = document.querySelector('.js_cardname');
+const cardjob = document.querySelector('.js_cardjob');
+const cardmail = document.querySelector('.js_cardemail');
+const cardlinkedin = document.querySelector('.js_cardlinkedin');
+const cardgithub = document.querySelector('.js_cardgithub');
 
-function handleKeyUp(event) {
-  const nameInputValue = nameInput.value;
-  const jobInputValue = jobInput.value;
-
-  if (nameInputValue !== "") {
-    cardname.innerHTML = nameInputValue;
+const renderForm = () => {
+  const nameValue = nameInput.value;
+  const jobValue = jobInput.value;
+  const linkedinValue = linkedinInput.value;
+  const githubValue = githubInput.value;
+  const mailValue = mailInput.value;
+  if (nameValue !== '') {
+    cardname.innerHTML = nameValue;
   } else {
     cardname.innerHTML = `Nombre Apellido`;
   }
-  if (jobInputValue !== "") {
-    cardjob.innerHTML = jobInputValue;
+  if (jobValue !== '') {
+    cardjob.innerHTML = jobValue;
   } else {
     cardjob.innerHTML = `Front-end developer`;
   }
+  if (linkedinValue !== '') {
+    cardlinkedin.href = linkedinValue;
+  } else {
+    cardlinkedin.href = 'https://es.linkedin.com/';
+  }
+  if (githubValue !== '') {
+    cardgithub.href = githubValue;
+  } else {
+    cardgithub.href = 'https://github.com/';
+  }
+  if (mailValue !== '') {
+    cardmail.href = `mailto:${mailValue}`;
+  } else {
+    cardmail.href = 'adalab@gmail.com';
+  }
+};
+
+function handleKeyUp(event) {
+  renderForm();
 }
 
-nameInput.addEventListener("keyup", handleKeyUp);
-jobInput.addEventListener("keyup", handleKeyUp);
+nameInput.addEventListener('keyup', handleKeyUp);
+jobInput.addEventListener('keyup', handleKeyUp);
+linkedinInput.addEventListener('keyup', handleKeyUp);
+githubInput.addEventListener('keyup', handleKeyUp);
+
+
 
 //
 
@@ -116,7 +143,7 @@ const cardPreview = document.querySelector('.js_cardPreview');
 function handlerRadio (ev) {
   const palette = parseInt(ev.currentTarget.value);
   data.palette = palette;
-  cardPreview.classList.remove('palette1','palette2','palette3',);
+  cardPreview.classList.remove('palette1','palette2','palette3');
   cardPreview.classList.add(`palette${palette}`);
 
 }
