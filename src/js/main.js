@@ -111,13 +111,18 @@ buttonShare.addEventListener("click", (event) => {
 
 
 const allRadio = document.querySelectorAll('.js_radio');
+const cardPreview = document.querySelector('.js_cardPreview');
 
 function handlerRadio (ev) {
+  const palette = parseInt(ev.currentTarget.value);
+  data.palette = palette;
+  cardPreview.classList.remove('')
 
 }
 
+
 for(const oneRadio of allRadio){
-oneRadio.addEventListener('click', handlerRadio);
+  oneRadio.addEventListener('click', handlerRadio);
 
 }
 
