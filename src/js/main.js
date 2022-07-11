@@ -116,7 +116,8 @@ const cardPreview = document.querySelector('.js_cardPreview');
 function handlerRadio (ev) {
   const palette = parseInt(ev.currentTarget.value);
   data.palette = palette;
-  cardPreview.classList.remove('')
+  cardPreview.classList.remove('palette1','palette2','palette3',);
+  cardPreview.classList.add(`palette${palette}`);
 
 }
 

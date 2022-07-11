@@ -96,3 +96,42 @@
 .socialmedia a {
   color: $dark-green;
 }
+
+.palette1{
+  .card__rectangle{
+    background-color: $medium-green;
+  }
+  .card__name{
+    color: $dark-green;
+  }
+  .socialmedia__icon{
+    color:$dark-green;
+    border:solid 2px $light-green;
+  }
+}
+
+.palette2{
+  .card__rectangle{
+    background-color: $dark-red;
+  }
+  .card__name{
+    color: $dark-brown;
+  }
+  .socialmedia__icon{
+    color:$dark-brown;
+    border:solid 2px $red;
+  }
+}
+
+.palette3{
+  .card__rectangle{
+    background-color: $medium-orange;
+  }
+  .card__name{
+    color: $grey-grey;
+  }
+  .socialmedia__icon{
+    color:$grey-grey;
+    border:solid 2px $light-grey;
+  }
+}
