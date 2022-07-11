@@ -93,3 +93,50 @@ buttonShare.addEventListener("click", (event) => {
 });
 
 //
+/* GUARDAR INPUTS */
+const emailInput = document.querySelector('.js_email');
+const tlfInput = document.querySelector('.js_tlf');
+const linkedinInput = document.querySelector('.js_linkedin');
+const githubInput = document.querySelector('.js_github');
+
+
+
+
+/* BOTÓN RESET */
+
+const resetButton = document.querySelector('.js-reset-button');
+
+function handleReset (ev) {
+  ev.preventDefault();
+
+}
+
+resetButton.addEventListener('click', handleReset);
+
+/*PALETAS
+
+1- Escuchar evento sobre los radios
+2- Identificar el radio seleccionado
+3- Asignar las clases de css correspondientes
+*/
+
+const allRadio = document.querySelectorAll('.js_radio');
+const previewContainer = document.querySelector('js-card');
+
+/*allRadio.addEventListener -> esto no funciona porque no se puede escuchar un evento sobre un array, hay que hacer un bucle*/
+
+
+function handlerRadio(ev) {
+const palette = parseInt(ev.currentTarget.value);
+data.palette = palette; //data es el objeto que almacena todos los valores de la tarjeta
+previewContainer.classList.remove('palette-1');
+previewContainer.classList.remove('palette-2');
+previewContainer.classList.remove('palette-3');
+
+previewContainer.classList.add(`palette-${palette}`);
+};
+
+for (const oneRadio of allRadio) {oneRadio.addEventListener('click', handlerRadio);}
+
+
+
