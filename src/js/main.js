@@ -156,21 +156,5 @@ for(const oneRadio of allRadio){
 
 }
 
-/* BOTÓN RESET */
 
-const resetButton = document.querySelector('.js-reset-button');
-
-function handleReset (ev) {
-  ev.preventDefault();
-  cardPreview.classList.remove('palette1','palette2','palette3');
-  cardPreview.classList.add('palette1');
-  cardname.innerHTML = `Nombre Apellido`;
-  cardjob.innerHTML = `Front-end developer`;
-  cardlinkedin.href = 'https://es.linkedin.com/';
-  cardgithub.href = 'https://github.com/';
-  cardmail.href = '#';
-}
-
-
-resetButton.addEventListener('click', handleReset);
 
