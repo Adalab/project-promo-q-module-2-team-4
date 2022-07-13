@@ -8,7 +8,6 @@ const shareTitle = document.querySelector('.js_title_share');
 
 const designContent = document.querySelector('.js_content_design');
 const fillContent = document.querySelector('.js_content_fill');
-const shareContent = document.querySelector('.js_content_share');
 
 const arrowIcon1 = document.querySelector('.js_arrow_design');
 const arrowIcon2 = document.querySelector('.js_arrow_fill');
@@ -21,12 +20,16 @@ const mailInput = document.querySelector('.js_email');
 const linkedinInput = document.querySelector('.js_linkedin');
 const githubInput = document.querySelector('.js_github');
 const telInput = document.querySelector('.js_tlf');
+const cardtel = document.querySelector('.js_cardtel');
 
 const cardname = document.querySelector('.js_cardname');
 const cardjob = document.querySelector('.js_cardjob');
 const cardmail = document.querySelector('.js_cardemail');
 const cardlinkedin = document.querySelector('.js_cardlinkedin');
 const cardgithub = document.querySelector('.js_cardgithub');
+const sectionUrl = document.querySelector('.js_paragraph');
+const urlServer = 'https://awesome-profile-cards.herokuapp.com/card';
+const errorMsg = document.querySelector('.js_error_msg');
 
 const data = {
   palette: '',
@@ -57,7 +60,7 @@ const createNewObject = () => {
 designTitle.addEventListener('click', (event) => {
   designContent.classList.toggle('collapsed');
   fillContent.classList.add('collapsed');
-  shareContent.classList.add('collapsed');
+  buttonShare.classList.add('collapsed');
   twitter.classList.add('collapsed');
   arrowIcon1.classList.toggle('arrow-down');
   if (arrowIcon2.classList.contains('arrow-down')) {
@@ -70,7 +73,7 @@ designTitle.addEventListener('click', (event) => {
 fillTitle.addEventListener('click', (event) => {
   fillContent.classList.toggle('collapsed');
   designContent.classList.add('collapsed');
-  shareContent.classList.add('collapsed');
+  buttonShare.classList.add('collapsed');
   twitter.classList.add('collapsed');
   arrowIcon2.classList.toggle('arrow-down');
   if (arrowIcon1.classList.contains('arrow-down')) {
@@ -81,7 +84,7 @@ fillTitle.addEventListener('click', (event) => {
   }
 });
 shareTitle.addEventListener('click', (event) => {
-  shareContent.classList.toggle('collapsed');
+  buttonShare.classList.toggle('collapsed');
   designContent.classList.add('collapsed');
   fillContent.classList.add('collapsed');
   twitter.classList.add('collapsed');
@@ -100,6 +103,8 @@ const renderForm = () => {
   const linkedinValue = linkedinInput.value;
   const githubValue = githubInput.value;
   const mailValue = mailInput.value;
+  const telValue = telInput.value;
+
   if (nameValue !== '') {
     cardname.innerHTML = nameValue;
   } else {
@@ -125,6 +130,11 @@ const renderForm = () => {
   } else {
     cardmail.href = 'adalab@gmail.com';
   }
+  if (telValue !== '') {
+    cardtel.href = `tel:${telValue}`;
+  } else {
+    cardtel.href = '';
+  }
 };
 
 function handleKeyUp(event) {
@@ -140,15 +150,30 @@ githubInput.addEventListener('keyup', handleKeyUp);
 mailInput.addEventListener('keyup', handleKeyUp);
 telInput.addEventListener('keyup', handleKeyUp);
 
-//
+// Fetch al servidor
 
-buttonShare.addEventListener('click', (event) => {
-  event.preventDefault();
-  twitter.classList.toggle('collapsed');
-  buttonShare.classList.add('grey');
-});
+function createCard () { console.log(data);
+  fetch(urlServer,
+    {method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((serverResp) => 
+      {console.log(serverResp); if (serverResp.success) {
+        sectionUrl.innerHTML = serverResp.cardURL;
+        sectionUrl.href = serverResp.cardURL;
+      } else {
+        errorMsg.innerHTML = '¡Ey! No has rellenado todos los campos';
+      }
+})
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
-//Selecionar paletas
+
+//Seleccionar paletas
 
 const allRadio = document.querySelectorAll('.js_radio');
 const cardPreview = document.querySelector('.js_cardPreview');
@@ -193,3 +218,13 @@ function handleReset(ev) {
   cleanObject();
 }
 resetButton.addEventListener('click', handleReset);
+
+
+//Eventos
+
+buttonShare.addEventListener('click', (event) => {
+  event.preventDefault();
+  twitter.classList.toggle('collapsed');
+  buttonShare.classList.add('grey');
+  createCard();
+});
