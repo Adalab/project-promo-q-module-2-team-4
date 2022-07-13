@@ -38,42 +38,39 @@
     <main class="main">
       <section class="preview">
         <div class="wrapper">
-          <button class="preview__button">
+          <button class="preview__button js-reset-button">
             <i class="fa-regular fa-trash-can"></i>Reset
           </button>
 
-          <article class="card">
+          <article class="card js_cardPreview">
             <div class="card__rectangle"></div>
             <div class="card__info">
               <h3 class="card__name js_cardname">Nombre Apellido</h3>
               <p class="card__job js_cardjob">Front-end developer</p>
             </div>
             <div class="card__photo">
-              <img
-                src="./assets/images/photo-temp.jpg"
-                alt="Foto de prueba"
-                width="100%"
-              />
+              <div class="profile">
+                <div class="profile__image js__profile-image" style="background-image:url(https://i.pinimg.com/236x/c4/db/d0/c4dbd0edfc001aabb1fcad74045be62c--teacup-pomeranian-puppy-animal-instinct.jpg)"></div>
             </div>
             <nav class="card__footer">
               <ul class="socialmedia">
                 <li>
-                  <a href="#" title="Teléfono" target="_blank"
+                  <a class="js_cardtel" href="#" title="Teléfono" target="_blank"
                     ><i class="socialmedia__icon fa-solid fa-mobile-screen-button"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="#" title="Correo" target="_blank"
+                  <a class="js_cardemail" href="#" title="Correo" target="_blank"
                     ><i class="socialmedia__icon fa-regular fa-envelope"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="#" title="LinkedIn" target="_blank"
+                  <a class="js_cardlinkedin" href="#" title="LinkedIn" target="_blank"
                     ><i class="socialmedia__icon fa-brands fa-linkedin-in"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="#" title="GitHub" target="_blank"
+                  <a class="js_cardgithub" href="#" title="GitHub" target="_blank"
                     ><i class="socialmedia__icon fa-brands fa-github-alt"></i
                   ></a>
                 </li>
@@ -83,7 +80,7 @@
         </div>
       </section>
 
-      <form class="form" action="">
+      <form class="form js_all_inputs" action="">
         <fieldset class="fieldset__1">
           <legend class="js_title_design fieldset__1--legend">
             <i class="fa-solid fa-vector-square fieldset__1--iconSquare"></i>
@@ -94,19 +91,37 @@
             <h3 class="range__title">Colores</h3>
             <div class="range__pantone">
               <div class="pantone1">
-                <input class="pantone1__input" type="radio" id="check1" name="select" />
+                <input
+                  class="js_radio pantone1__input"
+                  type="radio"
+                  value="1"
+                  id="check1"
+                  name="select"
+                />
                 <div class="pantone1__first"></div>
                 <div class="pantone1__second"></div>
                 <div class="pantone1__third"></div>
               </div>
               <div class="pantone2">
-                <input class="pantone1__input" type="radio" id="check2" name="select" />
+                <input
+                  class="js_radio pantone1__input"
+                  type="radio"
+                  value="2"
+                  id="check2"
+                  name="select"
+                />
                 <div class="pantone2__first"></div>
                 <div class="pantone2__second"></div>
                 <div class="pantone2__third"></div>
               </div>
               <div class="pantone3">
-                <input class="pantone1__input" type="radio" id="check3" name="select" />
+                <input
+                  class="js_radio pantone1__input"
+                  type="radio"
+                  value="3"
+                  id="check3"
+                  name="select"
+                />
                 <div class="pantone3__first"></div>
                 <div class="pantone3__second"></div>
                 <div class="pantone3__third"></div>
@@ -123,7 +138,7 @@
                 <i class="js_arrow_fill fa-solid fa-angle-up fieldset__2--iconArrow"></i>
               </legend>
               <div class="js_content_fill fieldset__2--div collapsed">
-                <label for="firstAndSecondName">Nombre completo</label>
+                <label class="label" for="firstAndSecondName">Nombre completo</label>
                 <input
                   placeholder="Ej: Sally Jill"
                   type="text"
@@ -131,7 +146,7 @@
                   id="firstAndSecondName"
                   class="fieldset__2--input js_name"
                 />
-                <label for="work">Puesto</label>
+                <label class="label" for="work">Puesto</label>
                 <input
                   placeholder="Ej: Front-end unicorns"
                   type="text"
@@ -139,24 +154,17 @@
                   id="work"
                   class="fieldset__2--input js_job"
                 />
-                <!-- <fieldset class="fieldset__2--fieldset">
-                  <legend>Imagen de perfil</legend>
-                  <button class="fieldset__2--button">Añadir imagen</button>
-                  <label for="AddImage"></label>
-                  <input
-                    type="button"
-                    id="AddImage"
-                    class="future_js"
-                  /></fieldset> -->
-                <label class= "fieldset__2--addImageLabel" for="image">Imagen de perfil</label>
-                <a href="#" class="fieldset__2--addImageButton">Añadir imagen</a>
-                <input
-                    type="field"
-                    id="AddImage"
-                    class="future_js"
-                  />
-                  <div class="square"></div>
-                <label for="email">Email</label>
+                
+                      <div class="wrapperImageFieldset2">
+                         <div class="action">
+                           <label class="action__upload-btn" for="img-selector">Añadir imagen</label>
+                          <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn">
+                        </div>
+              
+                      <div class="profile__preview js__profile-preview" style="background-image:url(https://i.pinimg.com/236x/c4/db/d0/c4dbd0edfc001aabb1fcad74045be62c--teacup-pomeranian-puppy-animal-instinct.jpg)"></div>
+                      </div>
+              
+                <label class="label" for="email">Email</label>
                 <input
                   placeholder="Ej: sallyhill@gmail.com"
                   type="email"
@@ -164,7 +172,7 @@
                   id="email"
                   class="fieldset__2--input js_email"
                 />
-                <label for="tel">Teléfono</label>
+                <label class="label" for="tel">Teléfono</label>
                 <input
                   placeholder="Ej. 555-55-55-55"
                   type="tel"
@@ -172,7 +180,7 @@
                   id="tel"
                   class="fieldset__2--input js_tlf"
                 />
-                <label for="linkedin">LinkedIn</label>
+                <label class="label" for="linkedin">LinkedIn</label>
                 <input
                   placeholder="Ej: linkedin.com/sally.hill"
                   type="url"
@@ -180,7 +188,7 @@
                   id="linkedin"
                   class="fieldset__2--input js_linkedin"
                 />
-                <label for="github">Github</label>
+                <label class="label" for="github">Github</label>
                 <input
                   placeholder="Ej: @sally-hill"
                   type="text"
@@ -189,6 +197,7 @@
                   class="fieldset__2--input js_github"
                 />
               </div>
+            </div>
             </fieldset>
 
         </html>
@@ -208,12 +217,12 @@
         <!-- EMPIEZA AQUÍ EL "FIELDSET-4"  -->
 
         <article class="fieldset-4__article js_twitter collapsed">
-          <h2 class="fieldset-4___article--title">La tarjeta ha sido creada:</h2>
-          <p class="fieldset-4__article--paragraph">
-            https://awesome-profile-card.com?id=A456DF0001
+          <h2 class="js_error_msg fieldset-4___article--title">La tarjeta ha sido creada:</h2>
+          <p class="js_paragraph fieldset-4__article--paragraph">
+            Aquí irá el enlace de tu tarjeta
           </p>
 
-          <button class="fieldset-4__article--button">
+          <button class="js_share_twitter fieldset-4__article--button">
             <i class="fa-brands fa-twitter"></i>Compartir en Twitter
           </button>
         </article>
