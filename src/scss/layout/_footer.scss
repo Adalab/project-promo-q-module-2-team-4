@@ -11,6 +11,7 @@
   @media all and(min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__copyright {
@@ -22,17 +23,19 @@
 
     @media all and(min-width: 768px) {
       margin-left: 40px;
+      margin-top: 10px;
     }
   }
 
   &__logo {
-    // margin-top: 12px;
+    margin-top: 12px;
     width: 103px;
     height: 40px;
     margin-bottom: 15px;
 
     @media all and(min-width: 768px) {
       margin-right: 40px;
+      margin-top: 14px;
     }
   }
 }
