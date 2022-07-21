@@ -160,6 +160,7 @@ function createNewElement(serverResp) {
   const linkText = document.createTextNode('Pulsa para acceder a tu tarjeta');
   linkElement.appendChild(linkText);
   linkElement.setAttribute('href', serverResp.cardURL);
+  linkElement.setAttribute('target', 'blank');
   divShare.appendChild(linkElement);
   linkElement.parentNode.replaceChild(linkElement, pElement);
   linkElement.classList.add('fieldset-4__article--paragraph');
