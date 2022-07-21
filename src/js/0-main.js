@@ -42,6 +42,17 @@ let data = {
   photo: "",
 };
 
+let userData = {
+
+  name: nameInput.value,
+  // job: "",
+  // phone: "",
+  // email: "",
+  // linkedin: "",
+  // github: "",
+  // photo: "",
+}
+
 const createNewObject = () => {
   const nameValue = nameInput.value;
   const jobValue = jobInput.value;
@@ -97,7 +108,7 @@ shareTitle.addEventListener("click", (event) => {
   }
 });
 
-const renderForm = () => {
+const renderForm = (data) => {
   const nameValue = nameInput.value;
   const jobValue = jobInput.value;
   const linkedinValue = linkedinInput.value;
@@ -106,7 +117,7 @@ const renderForm = () => {
   const telValue = telInput.value;
 
   if (nameValue !== "") {
-    cardname.innerHTML = nameValue;
+    cardname.innerHTML = `${data.name}`;
   } else {
     cardname.innerHTML = `Nombre Apellido`;
   }
@@ -135,7 +146,7 @@ const renderForm = () => {
   } else {
     cardtel.href = "";
   }
-  return;
+  localStorage.setItem("userData", JSON.stringify(data));
 };
 
 function handleKeyUp() {
@@ -188,7 +199,7 @@ function createCard() {
     .catch((error) => {
       console.log(error);
     });
-  localStorage.setItem("data", JSON.stringify(data));
+  
   renderForm();
 }
 
@@ -248,12 +259,6 @@ function handleReset(ev) {
 }
 resetButton.addEventListener("click", handleReset);
 
-
-function handleClicTwitter (ev){
-  ev.preventDefault();
-  let serverResp = '';
-  twitterButton.innerHTML = `<a href=${serverResp.cardURL}></a>`;
-}
 //Eventos
 
 buttonShare.addEventListener("click", (event) => {
@@ -263,16 +268,15 @@ buttonShare.addEventListener("click", (event) => {
   createCard();
 });
 
-twitterButton.addEventListener ('click', handleClicTwitter);
-
 function onload() {
-  let dataLocalStorage = JSON.parse(localStorage.getItem("data"));
+ const dataLocalStorage = JSON.parse(localStorage.getItem('userData'));
   console.log(dataLocalStorage);
-  if (dataLocalStorage) {
-    dataLocalStorage = data;
-    renderForm();
+  if (dataLocalStorage !== null) {
+    data = dataLocalStorage;
+    renderForm(userData);
     console.log(data);  }
   designContent.classList.remove('collapsed');
+  return userData;
 }
 
 onload();
