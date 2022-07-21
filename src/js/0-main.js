@@ -29,6 +29,7 @@ const cardlinkedin = document.querySelector(".js_cardlinkedin");
 const cardgithub = document.querySelector(".js_cardgithub");
 const urlServer = "https://awesome-profile-cards.herokuapp.com/card";
 const errorMsg = document.querySelector(".js_error_msg");
+const twitterButton = document.querySelector('.js_share_twitter');
 
 let data = {
   palette: "",
@@ -238,7 +239,7 @@ const cleanObject = () => {
   data.github = "";
   data.photo = "";
 };
-const resetButton = document.querySelector(".js-reset-button");
+const resetButton = document.querySelector('.js-reset-button');
 function handleReset(ev) {
   ev.preventDefault();
   cleanClasses();
@@ -247,6 +248,12 @@ function handleReset(ev) {
 }
 resetButton.addEventListener("click", handleReset);
 
+
+function handleClicTwitter (ev){
+  ev.preventDefault();
+  let serverResp = '';
+  twitterButton.innerHTML = `<a href=${serverResp.cardURL}></a>`;
+}
 //Eventos
 
 buttonShare.addEventListener("click", (event) => {
@@ -256,14 +263,16 @@ buttonShare.addEventListener("click", (event) => {
   createCard();
 });
 
+twitterButton.addEventListener ('click', handleClicTwitter);
+
 function onload() {
   let dataLocalStorage = JSON.parse(localStorage.getItem("data"));
   console.log(dataLocalStorage);
   if (dataLocalStorage) {
     dataLocalStorage = data;
     renderForm();
-    console.log(data);
-  }
+    console.log(data);  }
+  designContent.classList.remove('collapsed');
 }
 
 onload();
