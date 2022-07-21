@@ -150,6 +150,22 @@ githubInput.addEventListener('keyup', handleKeyUp);
 mailInput.addEventListener('keyup', handleKeyUp);
 telInput.addEventListener('keyup', handleKeyUp);
 
+// Función createNewElement
+
+function createNewElement(serverResp) {
+  const divShare = document.querySelector('.js_div_share');
+  const pElement = document.querySelector('.js_paragraph');
+  const linkElement = document.createElement('a');
+  const linkText = document.createTextNode('Pulsa para acceder a tu tarjeta');
+  linkElement.appendChild(linkText);
+  linkElement.setAttribute("href", serverResp.cardURL);
+  divShare.appendChild(linkElement);
+  linkElement.parentNode.replaceChild(linkElement, pElement);
+  linkElement.classList.add('fieldset-4__article--paragraph');
+  console.log(linkElement);
+}
+
+
 // Fetch al servidor
 
 function createCard () { console.log(data);
@@ -161,11 +177,13 @@ function createCard () { console.log(data);
     .then((response) => response.json())
     .then((serverResp) => 
       {console.log(serverResp); if (serverResp.success) {
-        sectionUrl.innerHTML = serverResp.cardURL;
-        sectionUrl.href = serverResp.cardURL;
+        // sectionUrl.innerHTML = serverResp.cardURL;
+        // sectionUrl.href = serverResp.cardURL;
+        createNewElement(serverResp);
       } else {
         errorMsg.innerHTML = '¡Ey! No has rellenado todos los campos';
       }
+      return serverResp;
 })
     .catch((error) => {
       console.log(error);
@@ -201,6 +219,15 @@ function cleanClasses() {
   cardmail.href = '#';
 }
 
+function cleanInputs(){
+  nameInput.value = '';
+  jobInput.value = '';
+  linkedinInput.value = '';
+  githubInput.value = '';
+  mailInput.value = '';
+  telInput.value = '';
+}
+
 const cleanObject = () => {
   data.palette = '';
   data.name = '';
@@ -216,6 +243,8 @@ function handleReset(ev) {
   ev.preventDefault();
   cleanClasses();
   cleanObject();
+  cleanInputs();
+
 }
 resetButton.addEventListener('click', handleReset);
 
