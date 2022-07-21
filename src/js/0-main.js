@@ -158,38 +158,36 @@ function createNewElement(serverResp) {
   const linkElement = document.createElement('a');
   const linkText = document.createTextNode('Pulsa para acceder a tu tarjeta');
   linkElement.appendChild(linkText);
-  linkElement.setAttribute("href", serverResp.cardURL);
+  linkElement.setAttribute('href', serverResp.cardURL);
   divShare.appendChild(linkElement);
   linkElement.parentNode.replaceChild(linkElement, pElement);
   linkElement.classList.add('fieldset-4__article--paragraph');
   console.log(linkElement);
 }
 
-
 // Fetch al servidor
 
-function createCard () { console.log(data);
-  fetch(urlServer,
-    {method: 'POST',
+function createCard() {
+  console.log(data);
+  fetch(urlServer, {
+    method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((serverResp) => 
-      {console.log(serverResp); if (serverResp.success) {
-        // sectionUrl.innerHTML = serverResp.cardURL;
-        // sectionUrl.href = serverResp.cardURL;
+    .then((serverResp) => {
+      console.log(serverResp);
+      if (serverResp.success) {
         createNewElement(serverResp);
       } else {
         errorMsg.innerHTML = '¡Ey! No has rellenado todos los campos';
       }
       return serverResp;
-})
+    })
     .catch((error) => {
       console.log(error);
     });
 }
-
 
 //Seleccionar paletas
 
@@ -219,7 +217,7 @@ function cleanClasses() {
   cardmail.href = '#';
 }
 
-function cleanInputs(){
+function cleanInputs() {
   nameInput.value = '';
   jobInput.value = '';
   linkedinInput.value = '';
@@ -244,10 +242,8 @@ function handleReset(ev) {
   cleanClasses();
   cleanObject();
   cleanInputs();
-
 }
 resetButton.addEventListener('click', handleReset);
-
 
 //Eventos
 
