@@ -1,7 +1,9 @@
 .preview {
-  height: 70vh;
+  height: 60vh;
   width: 100%;
-  background-image: linear-gradient(to bottom, $main-silver, $secondary-silver);
+  background: linear-gradient(to bottom, $main-silver, $secondary-silver);
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;

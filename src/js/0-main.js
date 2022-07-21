@@ -269,6 +269,7 @@ function onload() {
     console.log(data);
   }
   designContent.classList.remove('collapsed');
+  arrowIcon1.classList.add('arrow-down');
 }
 
 onload();
