@@ -47,6 +47,7 @@
   color: white;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
+  cursor: pointer;
 }
 .grey {
   background-color: #d5d5d5;
@@ -116,7 +117,7 @@
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
   color: #e17334;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .fieldset-4__article--button {
@@ -128,8 +129,10 @@
   color: white;
   font-size: 14px;
   font-family: "Open Sans";
+  text-decoration: none;
 }
 
 .fa-twitter {
-  margin-right: 9.5px;
+  margin: 8px 10px 0 5px;
+  
 }
