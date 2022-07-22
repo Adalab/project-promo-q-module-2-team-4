@@ -15,10 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/6d7b554f88.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/6d7b554f88.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./assets/images/favicon.png" />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
@@ -27,7 +24,7 @@
     <header class="header">
       <figure class="header__figure">
         <img
-          src="./assets/images/tarjetas-molonas.png"
+          src="./assets/images/commit_land_logo.png"
           alt="logo-awesome-profile-cards"
           class="header__figure--logo"
         />
@@ -36,7 +33,7 @@
 
 
     <main class="main">
-      <section class="preview">
+      <section class="preview" style="background-image:url(./assets/images/roller.png)">
         <div class="wrapper">
           <button class="preview__button js-reset-button">
             <i class="fa-regular fa-trash-can"></i>Reset
@@ -50,7 +47,7 @@
             </div>
             <div class="card__photo">
               <div class="profile">
-                <div class="profile__image js__profile-image" style="background-image:url(https://i.pinimg.com/236x/c4/db/d0/c4dbd0edfc001aabb1fcad74045be62c--teacup-pomeranian-puppy-animal-instinct.jpg)"></div>
+                <div class="profile__image js__profile-image" style="background-image:url(./assets/images/astronaut2.png)"></div>
             </div>
             <nav class="card__footer">
               <ul class="socialmedia">
@@ -85,7 +82,8 @@
           <legend class="js_title_design fieldset__1--legend">
             <i class="fa-solid fa-vector-square fieldset__1--iconSquare"></i>
             <h2 class="fieldset__1--title">Diseña</h2>
-            <i class="js_arrow_design fa-solid fa-angle-up fieldset__1--iconArrow"></i>
+            <i class="js_arrow_design fa-solid fa-rocket fieldset__1--iconArrow"></i>
+          
           </legend>
           <section class="js_content_design range collapsed">
             <h3 class="range__title">Colores</h3>
@@ -97,6 +95,7 @@
                   value="1"
                   id="check1"
                   name="select"
+                  checked
                 />
                 <div class="pantone1__first"></div>
                 <div class="pantone1__second"></div>
@@ -135,7 +134,7 @@
               <legend class="js_title_fill fieldset__2--legend">
                 <i class="fa-solid fa-keyboard fieldset__2--iconKeyboard"></i>
                 <h2 class="fieldset__2--title">Rellena</h2>
-                <i class="js_arrow_fill fa-solid fa-angle-up fieldset__2--iconArrow"></i>
+                <i class="js_arrow_fill fa-solid fa-rocket fieldset__2--iconArrow"></i>
               </legend>
               <div class="js_content_fill fieldset__2--div collapsed">
                 <label class="label" for="firstAndSecondName">Nombre completo</label>
@@ -161,7 +160,7 @@
                           <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn">
                         </div>
               
-                      <div class="profile__preview js__profile-preview" style="background-image:url(https://i.pinimg.com/236x/c4/db/d0/c4dbd0edfc001aabb1fcad74045be62c--teacup-pomeranian-puppy-animal-instinct.jpg)"></div>
+                      <div class="profile__preview js__profile-preview" style="background-image:url(./assets/images/astronaut2.png)"></div>
                       </div>
               
                 <label class="label" for="email">Email</label>
@@ -182,7 +181,7 @@
                 />
                 <label class="label" for="linkedin">LinkedIn</label>
                 <input
-                  placeholder="Ej: linkedin.com/sally.hill"
+                  placeholder="Ej: https://linkedin.com/sally.hill"
                   type="url"
                   name="linkedin"
                   id="linkedin"
@@ -190,7 +189,7 @@
                 />
                 <label class="label" for="github">Github</label>
                 <input
-                  placeholder="Ej: @sally-hill"
+                  placeholder="Ej: https://github.com/sally-hill"
                   type="text"
                   name="github"
                   id="github"
@@ -206,7 +205,7 @@
           <legend class="js_title_share fieldset-3__legend">
             <i class="fa-solid fa-share-nodes"></i>
             <h2 class="fieldset-3__legend--title">comparte</h2>
-            <i class="js_arrow_share fa-solid fa-angle-up fieldset__2--iconArrow"></i>
+            <i class="js_arrow_share fa-solid fa-rocket fieldset__2--iconArrow"></i>
           </legend>
 
           <button class="js_content_share fieldset-3__button collapsed">
@@ -217,25 +216,37 @@
         <!-- EMPIEZA AQUÍ EL "FIELDSET-4"  -->
 
         <article class="fieldset-4__article js_twitter collapsed">
-          <h2 class="js_error_msg fieldset-4___article--title">La tarjeta ha sido creada:</h2>
-          <p class="js_paragraph fieldset-4__article--paragraph">
-            Aquí irá el enlace de tu tarjeta
-          </p>
+          <h2 class="js_error_msg fieldset-4___article--title">
+            La tarjeta ha sido creada:
+          </h2>
 
-          <button class="js_share_twitter fieldset-4__article--button">
+          <div class="js_div_share">
+            <p class="js_paragraph fieldset-4__article--paragraph">
+              Aquí irá el enlace de tu tarjeta
+            </p>
+          </div>
+
+          <a class="js_share_twitter fieldset-4__article--button" target="_blank">
             <i class="fa-brands fa-twitter"></i>Compartir en Twitter
-          </button>
+          </a>
         </article>
 
       </form>
     </main>
 
     <footer class="footer">
-        <p class="footer__copyright">Awesome profile cards &copy;2018</p>
-        <figure class="footer__logo">
-            <img class="footer__image" src="./assets/images/logo-adalab.png" alt="Logo de Adalab" title="Adalab" width="100%">
-        </figure>
+      <p class="footer__copyright">Commit Land Cards &copy;2022</p>
+      <figure class="footer__logo">
+        <img
+          class="footer__image"
+          src="./assets/images/logo-adalab.png"
+          alt="Logo de Adalab"
+          title="Adalab"
+          width="100%"
+        />
+      </figure>
     </footer>
+
 
     <script src="./assets/js/main.js"></script>
   </body>
